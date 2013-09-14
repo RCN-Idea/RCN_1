@@ -118,9 +118,9 @@ public class MainActivity extends FragmentActivity implements
 			// getItem is called to instantiate the fragment for the given page.
 			// Return a DummySectionFragment (defined as a static inner class
 			// below) with the page number as its lone argument.
-			Fragment fragment = new DummySectionFragment();
+			Fragment fragment = new section_content();
 			Bundle args = new Bundle();
-			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+			args.putInt(section_content.ARG_SECTION_NUMBER, position + 1);
 			fragment.setArguments(args);
 			return fragment;
 		}
@@ -150,25 +150,70 @@ public class MainActivity extends FragmentActivity implements
 	 * A dummy fragment representing a section of the app, but that simply
 	 * displays dummy text.
 	 */
-	public static class DummySectionFragment extends Fragment {
+	public static class section_content extends Fragment {
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
 		 */
 		public static final String ARG_SECTION_NUMBER = "section_number";
 
-		public DummySectionFragment() {
+		public section_content() {
+			
 		}
 
 		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main_dummy,
-					container, false);
-			TextView dummyTextView = (TextView) rootView
-					.findViewById(R.id.section_label);
-			dummyTextView.setText(Integer.toString(getArguments().getInt(
-					ARG_SECTION_NUMBER))+" testomg");
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+			
+			View rootView = inflater.inflate(R.layout.section_form,container, false);
+			
+			TextView title_section = (TextView) rootView.findViewById(R.id.section_label);
+			
+			TextView title_sub1 = (TextView) rootView.findViewById(R.id.label_sub1);
+			TextView content_sub1 = (TextView) rootView.findViewById(R.id.content_sub1);
+			
+			TextView title_sub2 = (TextView) rootView.findViewById(R.id.label_sub2);
+			TextView content_sub2 = (TextView) rootView.findViewById(R.id.content_sub2);
+			
+			title_section.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER))+" testomg");
+			
+			switch (getArguments().getInt(ARG_SECTION_NUMBER)) {
+			case 1:
+				title_section.setText(R.string.title_section1);
+				
+				title_sub1.setText(R.string.title_section1_sub1);
+				content_sub1.setText(R.string.content_section1_sub1);
+				
+				title_sub2.setText(R.string.title_section1_sub2);
+				content_sub2.setText(R.string.content_section1_sub2);
+
+				break;
+
+			case 2:
+				title_section.setText(R.string.title_section2);
+				
+				title_sub1.setText(R.string.title_section2_sub1);
+				content_sub1.setText(R.string.content_section2_sub1);
+				
+				title_sub2.setText(R.string.title_section2_sub2);
+				content_sub2.setText(R.string.content_section2_sub2);		
+				
+				break;
+				
+			case 3:
+				title_section.setText(R.string.title_section3);
+				
+				title_sub1.setText(R.string.title_section3_sub1);
+				content_sub1.setText(R.string.content_section3_sub1);
+				
+				title_sub2.setText(R.string.title_section3_sub2);
+				content_sub2.setText(R.string.content_section3_sub2);
+				
+				break;				
+				
+			default:
+				break;
+			}
+			
 			return rootView;
 		}
 	}

@@ -3,8 +3,28 @@
 
     <string name="app_name">ATEX Guide</string>
     <string name="action_settings">Settings</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-
+   
+    <string name="title_section1">ATEX Guide</string>
+    <string name="title_section1_sub1">Hvad kan ATEX Guide</string>
+    <string name="content_section1_sub1">hjælpe med... guide vejledning</string>
+    <string name="title_section1_sub2">Hvorfor?</string>
+    <string name="content_section1_sub2">fordi det er sjovt</string>
+    
+    <string name="title_section2">Definitioner</string>
+    <string name="title_section2_sub1">ATEX:</string>
+    <string name="content_section2_sub1">ATEX beskrivelse</string>
+    <string name="title_section2_sub2">Begreber</string>
+    <string name="content_section2_sub2">Begreb beskrivelse</string>    
+    
+    <string name="title_section3">Teknisk Information</string>
+    <string name="title_section3_sub1">sub1</string>
+    <string name="content_section3_sub1">sub1 content</string>
+    <string name="title_section3_sub2">sub2</string>
+    <string name="content_section3_sub2">sub2 content</string>
+    
+    <string name="title_sectiondummy">Dummy</string>
+    <string name="title_sectiondummy_sub1">dummy1</string>
+    <string name="content_sectiondummy_sub1">dummy1-1</string>
+    <string name="title_sectiondummy_sub2">dummy2</string>
+    <string name="content_sectiondummy_sub2">dummy2-2</string>    
 </resources>
