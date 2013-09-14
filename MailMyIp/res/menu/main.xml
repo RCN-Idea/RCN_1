@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/txt_menu_settings"/>
+    <item android:id="@+id/menu_exit" android:showAsAction="never" android:title="@string/txt_menu_exit" android:orderInCategory="200"></item>
+
+</menu>

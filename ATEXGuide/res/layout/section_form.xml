@@ -52,5 +52,4 @@
         android:text="@string/content_sectiondummy_sub2"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-
 </GridLayout>
